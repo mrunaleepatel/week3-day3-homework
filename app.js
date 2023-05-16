@@ -66,4 +66,11 @@ $(() => {
   });
     $container.append($ul);
 
+// YEAR 4
+
+$(document).ready(() => {
+    $('#class-table').addClass('centered');
+  });
+  
+
 });

@@ -17,6 +17,21 @@ h1 {
   
 ul {
     list-style-type: none;
+    color: wheat;
   }
   
+table {
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+  }
+  
+th, td {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px;
+    color: wheat;
+  }
+  
+.centered {
+    margin: 0 auto;
+  }
   
