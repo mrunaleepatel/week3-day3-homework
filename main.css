@@ -1,3 +1,8 @@
 body {
-    background-color: #151038
+    background-color: #151038;
+}
+
+h1 {
+    text-align: center;
+    color: bisque;
 }
