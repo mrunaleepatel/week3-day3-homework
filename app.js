@@ -93,6 +93,19 @@ $('.owl').appendTo($trunk);
 // Have your pet come back
 $('.owl').appendTo($container);
 
+// YEAR 6
+
+// Hide your secret belongings
+$('.secret').hide('slow');
+
+// Delay revealing the secret belongings after the roommate falls asleep
+$('.secret').delay(1000).show('slow');
+
+// Transmogrify your pet's leash into half cabbage by adding the class "cabbage"
+$('.owl.leash').addClass('cabbage');
+
+// To fix your pet's leash by removing the class "cabbage"
+$('.owl.leash').removeClass('cabbage');
 
 
 });
