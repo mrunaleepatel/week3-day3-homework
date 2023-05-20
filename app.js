@@ -71,6 +71,28 @@ $(() => {
 $(document).ready(() => {
     $('#class-table').addClass('centered');
   });
-  
+
+// YEAR 5
+
+// Break your wand
+$('#wand').remove();
+
+// Drink all your butter beer
+$('#beverages li:contains("butter beer")').remove();
+
+// Get a new wand and insert it after your pet
+const $newWand = $('<h4>');
+$newWand.text('New Wand Description');
+$newWand.addClass('indigo');
+$('.owl').after($newWand);
+
+// Send your pet on a spy mission
+const $trunk = $('["trunk"]');
+$('.owl').appendTo($trunk);
+
+// Have your pet come back
+$('.owl').appendTo($container);
+
+
 
 });
