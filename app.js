@@ -1,111 +1,66 @@
-// YEAR 1
-
-$(() => {
-    // Query for the div with the id of container and set it to a variable named $container
-    const $container = $('#container');
-    console.log($container);
+$(document).ready(function() {
+  // Year 1
+      const $container = $('#container');
+      console.log($container);
+    
+      const $h1 = $('<h1>');
+      console.log($h1);
+    
+      $h1.text('Hogwarts');
+      $container.append($h1);
+    
+      // Add CSS rule for text alignment
+      $('body').css('text-align', 'center');
+    
+  // Year 2
+      const $h2 = $('<h2>').text('Mrunalee Patel');
+      const $h3 = $('<h3>').text('House: Hufflepuff');
+      const $h4Pet = $('<h4>').addClass('petType').text('Owl');
+      const $h4Wand = $('<h4>').text('Hawthorn');
+    
+      $container.append($h2, $h3, $h4Pet, $h4Wand);
+    
+  // Year 3
+  // not able to get the li in center or do I need to get the top stuff to the center. not sure
+      const $ul = $('<ul>').attr('storage', 'trunk');
+      const $liButterBeer = $('<li>').text('Butter Beer');
+      const $liInvisibilityCloak = $('<li>').addClass('secret').text('Invisibility Cloak');
+      const $liMagicMap = $('<li>').addClass('secret').text('Magic Map');
+      const $liTimeTurner = $('<li>').addClass('secret').text('Time Turner');
+      const $liLeash = $('<li>').addClass('petType').text('Leash');
+      const $liBeans = $('<li>').text('Bertie Botts Every Flavor, Jelly Beans');
+    
+      $ul.append($liButterBeer, $liInvisibilityCloak, $liMagicMap, $liTimeTurner, $liLeash, $liBeans);
+      $container.append($ul);
+    
+  // Year 4 in HTML - its a table
   
-    // Create an <h1> element and set it to a variable called $h1
-    const $h1 = $('<h1>');
-  
-    // Add some text inside the h1 element
-    $h1.text('Hogwarts');
-    console.log($h1);
-  
-    // Append the $h1 element to the $container
-    $container.append($h1);
-
-// YEAR 2
-
-    // Add h2 element with your name
-    const $h2 = $('<h2>');
-    $h2.text('Your Name');
-    $container.append($h2);
-
-    // Add h3 element with your house
-    const $h3 = $('<h3>');
-    $h3.text('House: Hufflepuff');
-    $container.append($h3);
-
-    // Add h4 element with your pet's name and a class matching your pet type
-    const $h4Pet = $('<h4>');
-    $h4Pet.text('Pet Name: Lily');
-    $h4Pet.addClass('owl'); 
-    $container.append($h4Pet);
-
-    // Add h4 element with your wand description
-    const $h4Wand = $('<h4>');
-    $h4Wand.text('Wand: Unicorn hair');
-    $container.append($h4Wand); 
-
-// YEAR 3
-
-    // Create unordered list
-    const $ul = $('<ul>');
-    $ul.attr('storage', 'trunk');
-
-     // Add list items
-    const items = [
-    'butter beer',
-    'invisibility cloak',
-    'magic map',
-    'time turner',
-    'leash',
-    "Bertie Bott's Every Flavor [Jelly] Beans"
-  ];
-    items.forEach((item) => {
-    const $li = $('<li>');
-    $li.text(item);
-    if (item == 'invisibility cloak', 'magic map', 'time turner') {
-      $li.addClass('secret');
-    }
-    if (item == 'leash') {
-      $li.addClass('owl'); 
-    }
-    $ul.append($li);
-  });
-    $container.append($ul);
-
-// YEAR 4
-
-$(document).ready(() => {
-    $('#class-table').addClass('centered');
-  });
-
-// YEAR 5
-
-// Break your wand
-$('#wand').remove();
-
-// Drink all your butter beer
-$('#beverages li:contains("butter beer")').remove();
-
-// Get a new wand and insert it after your pet
-const $newWand = $('<h4>');
-$newWand.text('New Wand Description');
-$newWand.addClass('indigo');
-$('.owl').after($newWand);
-
-// Send your pet on a spy mission
-const $trunk = $('["trunk"]');
-$('.owl').appendTo($trunk);
-
-// Have your pet come back
-$('.owl').appendTo($container);
-
-// YEAR 6
-
-// Hide your secret belongings
-$('.secret').hide('slow');
-
-// Delay revealing the secret belongings after the roommate falls asleep
-$('.secret').delay(1000).show('slow');
-
-// Transmogrify your pet's leash into half cabbage by adding the class "cabbage"
-$('.owl.leash').addClass('cabbage');
-
-// To fix your pet's leash by removing the class "cabbage"
-$('.owl.leash').removeClass('cabbage');
-
-
-});
+  // Year 5
+      $h4Wand.remove();
+      $liButterBeer.remove();
+      $ul.append($h4Wand);
+    
+      $h4Wand.css('color', 'red');
+    
+      $liLeash.detach();
+      $container.append($liLeash);
+    
+      $liLeash.remove();
+      $ul.append($liLeash);
+    
+  // Year 6
+      $('.secret').hide('slow').delay(1000).show('slow');
+    
+      $liLeash.addClass('cabbage');
+    //  added the cabbage styling in CSS but not working
+    
+      $liLeash.removeClass('cabbage');
+    
+  // Year 7
+      $h3.text('Fall 2018');
+      $ul.prepend($('<li>').text('Butter beer').attr('storage', 'chest'));
+    
+      $ul.attr('storage', 'chest');
+    
+    });
+    
