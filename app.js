@@ -52,7 +52,7 @@ $(document).ready(function() {
       $('.secret').hide('slow').delay(1000).show('slow');
     
       $liLeash.addClass('cabbage');
-    //  added the cabbage styling in CSS but not working
+    //  added the cabbage styling in CSS but not working so not sure if I need to style the cabbage or something else
     
       $liLeash.removeClass('cabbage');
     
